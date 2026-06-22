@@ -6,8 +6,8 @@ An open-source Python pipeline using LangGraph to orchestrate AI agents for data
 
 An advanced, autonomous multi-agent pipeline powered by LangGraph and orchestrated via Streamlit to systematically transform raw, unstructured markdown text documents into polished, production-grade presentation slides (.pptx).
 
-The system implements structural parsing, intelligent brand-identity engineering, text summarization, layout mapping, dynamic HTML rendering via Playwright, and binary output slide generation.
----
+**The system implements structural parsing, intelligent brand-identity engineering, text summarization, layout mapping, dynamic HTML rendering via Playwright, and binary output slide generation.
+**
 
 ## 🚀 Key Architectural Features
 
@@ -21,6 +21,7 @@ The architecture uses a state-machine framework topology (StateGraph) enforced t
         designer --> render_ppt[Playwright Slide Renderer]
         render_ppt --> convert_pptx[PPTX Export Engine]
         convert_pptx --> END
+        
 - Parser Node (Parsing_data): Extracts hierarchical content partitions, processes Markdown tables, and cleanly handles local Base64/remote assets with defensive header configurations to prevent server blocks.
 
 - Summary Node (summary_node): Condenses dense informational body paragraphs into structural, high-impact bullets tailored for executive review.
@@ -61,13 +62,15 @@ The architecture uses a state-machine framework topology (StateGraph) enforced t
 1. System Dependencies & Python Packages
 Ensure you have Python 3.10+ installed. Clone the repository and install the framework components:
 
-Bash
+Bash:
+
     pip install langgraph langchain groq python-pptx playwright streamlit python-dotenv requests
     
 2. Playwright Core Initialization
 Initialize your headless Chromium compilation runtime binary:
 
 Bash
+                
     playwright install chromium
     
 3. Environment Variable Configuration
@@ -84,13 +87,15 @@ Ini, TOML
 Running the Interactive Web Studio Dashboard
 To explore configurations, custom themes, upload fresh markdown text, and preview rendered screens live:
 
-Bash
-    streamlit run dashboard.py
+Bash:
+
+     streamlit run dashboard.py
     
 Scripted Terminal Invoke Workflow
 To directly invoke compilation pipelines through terminal configurations:
 
-Bash
+Bash:
+
     python main.py
     
 📄 License
