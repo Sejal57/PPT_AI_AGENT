@@ -49,53 +49,49 @@ The architecture uses a state-machine framework topology (StateGraph) enforced t
 ---
 ## 📂 Project Structure
 
-├── main.py          # StateGraph construction, edge mapping, and compilation loop
-├── tools.py         # Specialized agent node functions, parsing components, and render engines
-├── schema.py        # Centralized TypedDict state tracking declaration attributes
-├── dashboard.py     # Streamlit web studio frontend and parameter upload manager
-├── saved_images/    # local workspace containing decoded raw markdown Base64 image files
-└── output_images/   # Target destination layer hosting streamed remote web image metrics
-
+        ├── main.py          # StateGraph construction, edge mapping, and compilation loop
+        ├── tools.py         # Specialized agent node functions, parsing components, and render engines
+        ├── schema.py        # Centralized TypedDict state tracking declaration attributes
+        ├── dashboard.py     # Streamlit web studio frontend and parameter upload manager
+        ├── saved_images/    # local workspace containing decoded raw markdown Base64 image files
+        └── output_images/   # Target destination layer hosting streamed remote web image metrics
+        
 
 ⚙️ Installation & Workspace Setup
 1. System Dependencies & Python Packages
 Ensure you have Python 3.10+ installed. Clone the repository and install the framework components:
 
 Bash
-
-
-pip install langgraph langchain groq python-pptx playwright streamlit python-dotenv requests
+    pip install langgraph langchain groq python-pptx playwright streamlit python-dotenv requests
+    
 2. Playwright Core Initialization
 Initialize your headless Chromium compilation runtime binary:
 
 Bash
-
-
-playwright install chromium
+    playwright install chromium
+    
 3. Environment Variable Configuration
 Create a .env file inside the root repository framework layer to store execution parameters:
 
 Ini, TOML
 
-
-DOC_PATH="path/to/your/source/document.md"
-# Configure your respective API authentication keys required by the active client nodes
-GROQ_API_KEY="your-production-groq-key"
-GEMINI_API_KEY="your-production-gemini-key"
+    DOC_PATH="path/to/your/source/document.md"
+    # Configure your respective API authentication keys required by the active client nodes
+    GROQ_API_KEY="your-production-groq-key"
+    GEMINI_API_KEY="your-production-gemini-key"
+    
 🎮 Execution Management
 Running the Interactive Web Studio Dashboard
 To explore configurations, custom themes, upload fresh markdown text, and preview rendered screens live:
 
 Bash
-
-
-streamlit run dashboard.py
+    streamlit run dashboard.py
+    
 Scripted Terminal Invoke Workflow
 To directly invoke compilation pipelines through terminal configurations:
 
 Bash
-
-
-python main.py
+    python main.py
+    
 📄 License
 This asset studio project is open-source software licensed under the MIT License. Feel free to use, modify, and distribute according to your internal architectural requirements.
